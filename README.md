@@ -1,4 +1,4 @@
-# bolt-music-player
+# react-music-player
 
 ## Links
 * https://jleomorris.github.io/bolt-music-player
