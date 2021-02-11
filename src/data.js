@@ -12,6 +12,26 @@ function chillHop() {
       active: true,
     },
     {
+      name: "ebb//flo",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/07/5c2d5b05dfc98afb5ed850ca918f732445b8ca1e-1024x1024.jpg",
+      artist: "invention_",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=8741",
+      color: ["#3A4F76", "#DF8C8E"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Doin It",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/07/97781364b9aa2c2896642b5f896761e07fd9894e-1024x1024.jpg",
+      artist: "Tesk",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=10554",
+      color: ["#C6C0B4", "#786556"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
       name: "Daylight",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
