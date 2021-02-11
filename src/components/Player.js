@@ -6,7 +6,6 @@ import {
   faAngleRight,
   faPause,
 } from "@fortawesome/free-solid-svg-icons"
-import {playAudio} from '../util'
 
 
 export default function Player({currentSong, setCurrentSong, songs, isPlaying, setIsPlaying, audioRef, setSongInfo, songInfo}) {
@@ -35,15 +34,15 @@ export default function Player({currentSong, setCurrentSong, songs, isPlaying, s
     setSongInfo({...songInfo, currentTime: e.target.value})
   }
 
-  const skipTrackHandler = (direction) => {
-    const currentIndex = songs.findIndex((song)=>song.id===currentSong.id);
+  const skipTrackHandler = async (direction) => {
+    let currentIndex = songs.findIndex((song)=>song.id===currentSong.id);
     if(direction==="back"){
-      setCurrentSong(songs[currentIndex === 0 ? songs.length-1 : currentIndex - 1]);
-      playAudio(isPlaying, audioRef)
+      await setCurrentSong(songs[currentIndex === 0 ? songs.length-1 : currentIndex - 1]);
+      if (isPlaying) audioRef.current.play()
       return;
     }
-    setCurrentSong(songs[(currentIndex + 1) % songs.length]);
-    playAudio(isPlaying, audioRef)
+    await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+    if (isPlaying) audioRef.current.play()
   }
 
 
