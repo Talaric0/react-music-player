@@ -1,7 +1,7 @@
 # Chillhopify
 
 ## Links
-*
+* https://talaric0.github.io/react-music-player/
 
 ## Description
 <p>This is a music player app. It was developed using create-react-app and function components, for styling SCSS is used. A library and dark mode have been incorporated.</p>
