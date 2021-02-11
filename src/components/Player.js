@@ -51,11 +51,15 @@ export default function Player({currentSong, setCurrentSong, songs, isPlaying, s
     transform: `translateX(${songInfo.animationPercentage}%)`
   }
 
+  const gradientStyle = {
+    background: `linear-gradient(to right, ${currentSong.color[0]}, ${currentSong.color[1]})`
+  }
+
   return (
     <div className="player">
       <div className="time-control">
         <p>{getTime(songInfo.currentTime)}</p>
-        <div style={{background: `linear-gradient(to right, ${currentSong.color[0]}, ${currentSong.color[1]})`}} className="track">
+        <div style={gradientStyle} className="track">
           <input 
             type="range"
             min={0}
