@@ -1,4 +1,4 @@
-# react-music-player
+# Chillhopify
 
 ## Links
 * https://jleomorris.github.io/bolt-music-player
