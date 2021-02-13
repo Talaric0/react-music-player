@@ -25,6 +25,7 @@ function App() {
     animationPercentage: 0,
   })
   const [libraryStatus, setLibraryStatus] = useState(false);
+  const [isDarkModeActive, setIsDarkModeActive] = useState(false);
 
   //handlers
   const timeUpdateHandler = (e) => {
@@ -56,6 +57,8 @@ function App() {
       <Nav 
         libraryStatus={libraryStatus}
         setLibraryStatus={setLibraryStatus}
+        isDarkModeActive={isDarkModeActive}
+        setIsDarkModeActive={setIsDarkModeActive}
       />
       <Song 
         currentSong={currentSong}
